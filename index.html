@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Supplementary material">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supplementary Material</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <p class="has-text-centered" style="margin-bottom: 1rem; font-size: 1.1rem;">
+          Zero-shot I2V-generated video plans that violate physical constraints (WAN-0S).
+        </p>
+        <div class="columns is-multiline">
+          <div class="column is-one-fifth has-text-centered">
+            <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 4px;">
+              <source src="./static/images/figures/videos/spatial_bilocation.mp4" type="video/mp4">
+            </video>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Spatial Bilocation</p>
+          </div>
+          <div class="column is-one-fifth has-text-centered">
+            <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 4px;">
+              <source src="./static/images/figures/videos/object_teleportation.mp4" type="video/mp4">
+            </video>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Object Teleportation</p>
+          </div>
+          <div class="column is-one-fifth has-text-centered">
+            <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 4px;">
+              <source src="./static/images/figures/videos/physics_violation.mp4" type="video/mp4">
+            </video>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Rigid-Body Violation</p>
+          </div>
+          <div class="column is-one-fifth has-text-centered">
+            <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 4px;">
+              <source src="./static/images/figures/videos/object_disintegration.mp4" type="video/mp4">
+            </video>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Object Disintegration</p>
+          </div>
+          <div class="column is-one-fifth has-text-centered">
+            <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 4px;">
+              <source src="./static/images/figures/videos/morphologic_drift.mp4" type="video/mp4">
+            </video>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Morphologic Drift</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <figure class="image">
+        <img src="./static/images/figures/teaser_panel.jpg"
+             alt="Teaser panel">
+      </figure>
+      <p class="has-text-centered" style="margin-top: 1rem; font-size: 0.9rem;">
+        <strong>(a)</strong> Zero-shot I2V-generated plans violate temporal consistency and physical constraints, leading to failures when mapped to executable actions via inverse-dynamics models (IDM).
+        <strong>(b)</strong> GVP-WM projects video-generated plans onto dynamically feasible latent trajectories via latent-space trajectory optimization under a pre-trained action-conditioned world model.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <p class="has-text-centered" style="margin-bottom: 0.75rem; font-size: 0.95rem;">
+          <strong>Table 1:</strong> Meta-World (Reach Wall) Average Success Rate with 95% Stratified Bootstrap CIs. Best in <strong>bold</strong>, second best in <em>italics</em>.
+        </p>
+        <div style="overflow-x: auto;">
+          <table class="table is-bordered is-striped is-hoverable" style="margin: 0 auto;">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>T=25</th>
+                <th>T=50</th>
+                <th>T=80</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GVP-WM (WAN-0S)</td>
+                <td><em>76.0</em> [72.0, 80.0]</td>
+                <td><em>48.0</em> [44.0, 52.0]</td>
+                <td><em>34.7</em> [32.0, 38.0]</td>
+              </tr>
+              <tr>
+                <td>GVP-WM (Oracle)</td>
+                <td><strong>82.0</strong> [80.0, 84.0]</td>
+                <td><strong>54.0</strong> [52.0, 56.0]</td>
+                <td><strong>42.0</strong> [40.0, 44.0]</td>
+              </tr>
+              <tr>
+                <td>MPC-CEM</td>
+                <td>75.3 [70.0, 80.0]</td>
+                <td>41.3 [36.0, 48.0]</td>
+                <td>26.0 [22.0, 30.0]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
